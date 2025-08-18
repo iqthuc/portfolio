@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang=vi>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>iqthuc portfolio</title>
+<link rel=stylesheet href=perfect_web.css>
+<script src=perfect_web.js defer></script>
+<link rel=icon href=assets/images/favicon.ico type=image/webp>
+</head>
+<body>
+<canvas id=skyCanvas></canvas>
+<div class=container>
+<div class=header>
+<img src=assets/images/avatar.webp alt=avatar class=avatar>
+<div class=intro>
+<h1>Nguyễn Quang Thức</h1>
+<p>Software Engineer</p>
+</div>
+</div>
+<div class=time-widget>
+<div class=time-widget-header>
+<div class=time-widget-location id=time-widget-location>
+📍 Loading...
+</div>
+<div class=time-widget-weather-icon id=time-widget-weather-icon>
+&nbsp;
+</div>
+</div>
+<div class=time-widget-main-content>
+<div class=time-widget-time-section>
+<div class=time id=current-time>00:00</div>
+<div class=date id=current-date>Loading...</div>
+</div>
+<div class=time-widget-weather-section>
+<div class=time-widget-temperature id=time-widget-temperature>
+&nbsp;
+</div>
+<div class=time-widget-weather-desc id=time-widget-weather-desc>
+&nbsp;
+</div>
+</div>
+</div>
+</div>
+<div class=main-content>
+<div class=profile-section>
+<div class=profile-content>
+<div class=tab-navigation>
+<button class="tab-btn active" onclick='switchTab(event,"about")'>
+🚀 About
+</button>
+<button class=tab-btn onclick='switchTab(event,"skills")'>
+⚡ Skills
+</button>
+<button class=tab-btn onclick='switchTab(event,"projects")'>
+🛸 Projects
+</button>
+</div>
+<div id=about class="tab-content active">
+<h2>Personal Orbit</h2>
+<p>
+💻 I’m a Software Engineer specializing in Flutter, with over 2 years of experience in crafting high-performance, scalable, and user-friendly mobile applications. Beyond building robust apps, I’m committed to continuously learning new technologies, exploring best practices, and refining my skills to deliver clean, maintainable, and impactful solutions. My goal is not just to write code, but to create digital experiences that truly make a difference.
+</p>
+<p>
+🔭 When I’m not buried in code, you’ll probably find me tinkering with some random tech idea, sketching a side project that may or may not see the light of day, or just chasing whatever sparks my curiosity at the moment.
+</p>
+<img src=assets/images/avatar.webp alt="fun coding">
+<p id=slogan>“Trust me, bro. Absolutely no bugs.”</p>
+</div>
+<div id=skills class=tab-content>
+<h2>Technical Universe</h2>
+<p>
+My skills span across multiple dimensions of software development:
+</p>
+<div class=skills-container>
+<div class=skill-category>
+<h4>Mobile</h4>
+<div class=skills-list>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#dart></use>
+</svg>
+<div class=skill-name>Dart</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#flutter></use>
+</svg>
+<div class=skill-name>Flutter</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#kotlin></use>
+</svg>
+<div class=skill-name>Kotlin</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#swift></use>
+</svg>
+<div class=skill-name>Swift</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#android></use>
+</svg>
+<div class=skill-name>Android</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#apple></use>
+</svg>
+<div class=skill-name>iOS</div>
+</div>
+</div>
+</div>
+<div class=skill-category>
+<h4>Frontend</h4>
+<div class=skills-list>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#html></use>
+</svg>
+<div class=skill-name>HTML</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#css></use>
+</svg>
+<div class=skill-name>CSS</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#javascript></use>
+</svg>
+<div class=skill-name>JavaScript</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#svelte></use>
+</svg>
+<div class=skill-name>Svelte</div>
+</div>
+</div>
+</div>
+<div class=skill-category>
+<h4>Backend</h4>
+<div class=skills-list>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#go></use>
+</svg>
+<div class=skill-name>Go</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#rest></use>
+</svg>
+<div class=skill-name>RESTful API</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#graphql></use>
+</svg>
+<div class=skill-name>GraphQL</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#firebase></use>
+</svg>
+<div class=skill-name>Firebase</div>
+</div>
+</div>
+</div>
+<div class=skill-category>
+<h4>Database & Storage</h4>
+<div class=skills-list>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#postgres></use>
+</svg>
+<div class=skill-name>PostgreSQL</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#mongodb></use>
+</svg>
+<div class=skill-name>MongoDB</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#sqlite></use>
+</svg>
+<div class=skill-name>SQLite</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#redis></use>
+</svg>
+<div class=skill-name>Redis</div>
+</div>
+</div>
+</div>
+<div class=skill-category>
+<h4>Tools</h4>
+<div class=skills-list>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#git></use>
+</svg>
+<div class=skill-name>Git</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#docker></use>
+</svg>
+<div class=skill-name>Docker</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#jenkins></use>
+</svg>
+<div class=skill-name>Jenkins</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#bash></use>
+</svg>
+<div class=skill-name>Bash</div>
+</div>
+<div class=skill-item>
+<svg class=skill-icon>
+<use href=assets/icons/sprite.svg#linux></use>
+</svg>
+<div class=skill-name>Linux</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=projects class=tab-content>
+<h2>Project Constellation</h2>
+<p>
+Explore the digital worlds I've created across different domains:
+</p>
+<div class=projects-showcase>
+<div class="project-card disable">
+<div class=project-header>
+<div class=project-title>AEON MALL e&#8209;commerce</div>
+</div>
+<div class=project-desc>
+An e-commerce module built with Flutter and seamlessly integrated into a pre-existing mobile application, delivering a smooth and engaging shopping experience.
+</div>
+<div class=project-tech>
+<span class=tech-tag>Flutter</span>
+<span class=tech-tag>Android</span>
+<span class=tech-tag>iOS</span>
+</div>
+</div>
+<div class="project-card disable">
+<div class=project-header>
+<div class=project-title>Device management</div>
+</div>
+<div class=project-desc>
+An internal company application developed to manage mobile devices and tablets used primarily for testing purposes.
+</div>
+<div class=project-tech>
+<span class=tech-tag>Flutter</span>
+<span class=tech-tag>Google Maps</span>
+</div>
+</div>
+<a class=project-card href="https://play.google.com/store/apps/details?id=vn.qsoft.ulove&hl=en" target=_blank>
+<div class=project-header>
+<div class=project-title>Keep couple love story</div>
+<svg class=external-link-icon>
+<use href=assets/icons/sprite.svg#external-link></use>
+</svg>
+</div>
+<div class=project-desc>
+A heartfelt mobile app for couples, crafted to capture the essence of their journey together. It provides a charming space to celebrate love and create lasting memories.
+</div>
+<div class=project-tech>
+<span class=tech-tag>Flutter</span>
+<span class=tech-tag>SQLite</span>
+<span class=tech-tag>Firebase</span>
+</div>
+</a>
+<a class=project-card href="https://play.google.com/store/apps/details?id=com.novelfulltop.reader&hl=en" target=_blank>
+<div class=project-header>
+<div class=project-title>Web novel</div>
+<svg class=external-link-icon>
+<use href=assets/icons/sprite.svg#external-link></use>
+</svg>
+</div>
+<div class=project-desc>
+A fantastic app for accessing original free books, novels, and love story series, designed to provide a comfortable and distraction-free reading experience.
+</div>
+<div class=project-tech>
+<span class=tech-tag>Flutter</span>
+<span class=tech-tag>SQLite</span>
+<span class=tech-tag>Firebase</span>
+</div>
+</a>
+<a class=project-card href="https://play.google.com/store/apps/details?id=com.qglobal.funny.emojikitchen&hl=en" target=_blank>
+<div class=project-header>
+<div class=project-title>Emoji kitchen</div>
+<svg class=external-link-icon>
+<use href=assets/icons/sprite.svg#external-link></use>
+</svg>
+</div>
+<div class=project-desc>
+A playful mobile game centered around creative emoji combinations and puzzles, offering a fun and engaging experience for players.
+</div>
+<div class=project-tech>
+<span class=tech-tag>Flutter</span>
+<span class=tech-tag>SQLite</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=sidebar>
+<div class=music-player>
+<h3>✨ Playlist</h3>
+<div class=playlist id=playlist></div>
+<div class=player-controls>
+<div class=progress-container>
+<div class=progress-bar id=progressBar>
+<div class=progress id=progress></div>
+</div>
+<div class=time-display>
+<span id=currentTime>0:00</span>
+<span id=totalTime>0:00</span>
+</div>
+</div>
+<div class=control-buttons>
+<button class="control-btn secondary-btn" id=shuffleBtn title=Shuffle>
+<svg>
+<use href=assets/icons/sprite.svg#shuffle></use>
+</svg>
+</button>
+<button class="control-btn secondary-btn" id=prevBtn title=Previous>
+<svg>
+<use href=assets/icons/sprite.svg#backward-step></use>
+</svg>
+</button>
+<button class="control-btn play-btn primary-btn" id=playBtn title=Play/Pause>
+<svg>
+<use href=assets/icons/sprite.svg#play></use>
+</svg>
+</button>
+<button class="control-btn secondary-btn" id=nextBtn title=Next>
+<svg>
+<use href=assets/icons/sprite.svg#forward-step></use>
+</svg>
+</button>
+<button class="control-btn secondary-btn" id=repeatBtn title=Repeat>
+<svg>
+<use href=assets/icons/sprite.svg#repeat></use>
+</svg>
+</button>
+</div>
+</div>
+<audio id=audioPlayer preload=metadata></audio>
+</div>
+<div class=contact-info>
+<h3>📡 Contact</h3>
+<a href=mailto:iqthuc256@gmail.com class=contact-item>
+<svg>
+<use href=assets/icons/sprite.svg#envelope></use>
+</svg>
+<span>iqthuc256@gmail.com</span>
+</a>
+<a href=https://github.com/iqthuc target=_blank class=contact-item>
+<svg>
+<use href=assets/icons/sprite.svg#github></use>
+</svg>
+<span>github.com/iqthuc</span>
+</a>
+<a href=https://facebook.com/iqthuc target=_blank class=contact-item>
+<svg>
+<use href=assets/icons/sprite.svg#facebook></use>
+</svg>
+<span>facebook.com/iqthuc</span>
+</a>
+</div>
+</div>
+<div class=footer>
+<p>© 2025 - Crafted with ❤️ among the stars</p>
+</div>
+</div>
+</body>
+</html>
